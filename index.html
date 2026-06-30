@@ -337,6 +337,53 @@
   footer .brand{justify-content:center; margin-bottom:14px;}
   footer a{color:var(--gold-soft);}
   footer a:hover{text-decoration:underline;}
+  /* ---------- Mobile ---------- */
+  @media (max-width:760px){
+    .hero{
+      grid-template-columns:1fr;
+      padding:40px 20px 56px;
+      gap:36px;
+      text-align:left;
+    }
+    .hero-portrait{order:-1; max-width:220px; margin:0 auto;}
+    .die-deco.d1{width:60px; top:-20px; right:-16px;}
+    h1{font-size:clamp(1.8rem, 8vw, 2.4rem);}
+    .hero p.lead{font-size:1rem; max-width:100%;}
+    .hero-cta{width:100%;}
+    .hero-cta .btn{flex:1 1 auto; justify-content:center; text-align:center;}
+
+    section.block{padding:56px 0;}
+    .section-head{margin-bottom:28px; padding:0 20px;}
+    .section-head h2{font-size:1.5rem;}
+
+    .about-wrap{grid-template-columns:1fr; padding:0 20px; gap:32px;}
+    .stat-grid{grid-template-columns:1fr 1fr; gap:12px;}
+    .stat-card{padding:18px;}
+    .stat-card .num{font-size:1.7rem;}
+
+    .projects{padding:0 20px; gap:20px;}
+    .project-body{padding:24px 20px;}
+    .project-media{padding:24px;}
+    .project-media img{max-width:100px; max-height:100px;}
+    .project-body h3{font-size:1.2rem;}
+    .project-top{flex-direction:column; align-items:flex-start; gap:8px;}
+
+    .comm-wrap{padding:0 20px;}
+    .pro-card{padding:18px;}
+    .pro-links{gap:8px;}
+    .pro-links a{padding:7px 12px; font-size:0.78rem;}
+
+    nav{padding:14px 20px;}
+    .brand{font-size:0.95rem;}
+
+    footer{padding:36px 20px;}
+  }
+
+  @media (max-width:420px){
+    .stat-grid{grid-template-columns:1fr;}
+    .hero-cta{flex-direction:column;}
+    .feature-list{font-size:0.82rem;}
+  }
 </style>
 </head>
 <body>
@@ -533,7 +580,7 @@
   <div class="brand"><span class="dot"></span><span>MAIQ</span></div>
   <p data-i18n="footer.text">Construído com café, dados e algumas linhas a mais de JavaScript do que o necessário.</p>
   <p style="margin-top:10px;">
-    <a href="https://www.patreon.com/cw/Maiq" target="_blank" rel="noopener">Ajude a manter os projetos com um cafezinho!</a>
+    <a href="https://www.patreon.com/cw/Maiq" target="_blank" rel="noopener">Patreon</a>
   </p>
 </footer>
 
