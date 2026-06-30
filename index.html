@@ -3,8 +3,9 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Maiq — Bots, Jogos & Ferramentas para Comunidades</title>
+<title>Maiq, Bots, Jogos & Ferramentas para Comunidades</title>
 <meta name="description" content="Portfólio de Maiq: GDI, NinScroll, QuizArena e outras ferramentas para comunidades de RPG e games.">
+<link rel="icon" type="image/png" href="assets/dice.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@400;500;600;700&family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -282,16 +283,51 @@
   }
   @media (max-width:760px){ .showcase-grid{grid-template-columns:1fr;} }
 
-  /* ---------- Communities / links ---------- */
+  /* ---------- Communities / professional ---------- */
   .comm-wrap{max-width:1180px; margin:0 auto; padding:0 28px;}
-  .comm-card{
-    background:linear-gradient(135deg, var(--surface), var(--surface-2));
-    border:1px solid var(--line); border-radius:18px;
-    padding:40px; display:flex; align-items:center; justify-content:space-between;
-    gap:24px; flex-wrap:wrap;
+  .comm-split{display:grid; grid-template-columns:1fr 1.4fr; gap:28px;}
+  .comm-side-title{
+    font-family:var(--mono); font-size:0.78rem; color:var(--muted);
+    letter-spacing:0.1em; text-transform:uppercase; margin-bottom:16px;
   }
-  .comm-card h3{font-family:var(--display); font-size:1.3rem; margin-bottom:8px;}
-  .comm-card p{color:var(--muted); max-width:480px;}
+  .comm-item{
+    display:flex; align-items:center; gap:16px;
+    background:var(--surface); border:1px solid var(--line); border-radius:16px;
+    padding:20px; transition:border-color .2s, transform .2s;
+  }
+  .comm-item:hover{border-color:rgba(216,179,102,0.5); transform:translateY(-2px);}
+  .comm-item img{width:46px; height:46px; object-fit:contain; border-radius:10px; flex-shrink:0;}
+  .comm-fallback{
+    width:46px; height:46px; border-radius:10px; flex-shrink:0;
+    background:linear-gradient(135deg, var(--purple), var(--purple-2));
+    display:flex; align-items:center; justify-content:center;
+    font-family:var(--display); font-weight:700; font-size:0.92rem; color:#fff;
+  }
+  .comm-item h4{font-family:var(--display); font-size:1.02rem; font-weight:600; margin-bottom:3px;}
+  .comm-item span{color:var(--muted); font-size:0.84rem;}
+
+  .pro-card{
+    background:linear-gradient(135deg, var(--surface), var(--surface-2));
+    border:1px solid var(--line); border-radius:16px;
+    padding:24px; display:flex; gap:18px; align-items:flex-start;
+  }
+  .pro-card img{width:54px; height:54px; object-fit:contain; border-radius:12px; flex-shrink:0;}
+  .pro-info h4{font-family:var(--display); font-size:1.1rem; font-weight:600; margin-bottom:4px;}
+  .pro-role{
+    display:inline-block; font-family:var(--mono); font-size:0.72rem; color:var(--gold-soft);
+    border:1px solid var(--gold); padding:3px 10px; border-radius:999px; margin-bottom:14px;
+  }
+  .pro-links{display:flex; flex-wrap:wrap; gap:10px;}
+  .pro-links a{
+    font-size:0.82rem; font-weight:600; padding:8px 14px; border-radius:8px;
+    border:1px solid var(--line); transition:all .18s;
+  }
+  .pro-links a:hover{border-color:var(--purple); color:var(--purple); transform:translateY(-1px);}
+
+  @media (max-width:760px){
+    .comm-split{grid-template-columns:1fr;}
+    .pro-card{flex-direction:column;}
+  }
 
   /* ---------- Footer ---------- */
   footer{
@@ -326,12 +362,12 @@
 
 <section class="hero">
   <div>
-    <div class="eyebrow" data-i18n="hero.eyebrow">Desenvolvedor de bots & ferramentas para comunidades</div>
-    <h1 data-i18n="hero.title">Eu construo as ferramentas que fazem <span class="accent">comunidades funcionarem.</span></h1>
-    <p class="lead" data-i18n="hero.lead">Bots de Discord, jogos no navegador e sistemas internos para RPG, NinOnline e Minecraft — projetados, codados e mantidos do início ao fim.</p>
+    <div class="eyebrow" data-i18n="hero.eyebrow">Hobby: bots e ferramentas para comunidades</div>
+    <h1 data-i18n="hero.title">Eu crio as ferramentas que ajudam <span class="accent">comunidades a funcionar.</span></h1>
+    <p class="lead" data-i18n="hero.lead">Nas horas livres, idealizo e dou vida a bots de Discord, jogos no navegador e sistemas internos para RPG, NinOnline e Minecraft, do conceito até o uso real em produção.</p>
     <div class="hero-cta">
       <a href="#projetos" class="btn btn-primary" data-i18n="hero.ctaPrimary">Ver projetos</a>
-      <a href="https://linktr.ee/maiqbr" target="_blank" rel="noopener" class="btn btn-ghost" data-i18n="hero.ctaGhost">Comunidades que administro</a>
+      <a href="#comunidades" class="btn btn-ghost" data-i18n="hero.ctaGhost">Comunidades</a>
     </div>
   </div>
   <div class="hero-portrait">
@@ -349,17 +385,17 @@
   </div>
   <div class="about-wrap">
     <div class="about-text">
-      <p data-i18n="about.p1">Trabalho na intersecção entre jogos e ferramentas: construo bots de Discord, jogos web e sistemas internos que ajudam comunidades de RPG, NinOnline e Minecraft a funcionar melhor — desde rolagem de dados até economia interna, moderação e eventos.</p>
-      <p data-i18n="about.p2">Hoje meu projeto principal é o GDI, um app de Discord e Telegram para RPG usado por diversas comunidades. Também desenvolvo e administro sistemas sob medida, como o NinScroll para comunidades de NinOnline, além de jogos e apps menores.</p>
+      <p data-i18n="about.p1">É um hobby: gosto de pensar em sistemas que resolvem problemas reais de comunidades, da rolagem de dados acessível à economia interna e moderação, e de dar vida a essas ideias.</p>
+      <p data-i18n="about.p2">Hoje meu projeto principal é o GDI, um app para RPG usado em várias comunidades. Também idealizei o NinScroll para comunidades de NinOnline, ajudei na construção do Nin Online CCG BR 2.0, além de jogos e apps menores.</p>
       <div class="skill-tags">
-        <span>JavaScript</span><span>Discord.js</span><span>Firebase</span><span>Discord API</span><span>Game Design</span><span>UI/UX</span>
+        <span>Discord Bots</span><span>Game Design</span><span>RPG & TTRPG</span><span>Automação</span><span>UI/UX</span><span>Comunidades</span>
       </div>
     </div>
     <div class="stat-grid">
       <div class="stat-card"><div class="num">4+</div><div class="label" data-i18n="about.stat1">Bots & apps em produção</div></div>
-      <div class="stat-card"><div class="num">2</div><div class="label" data-i18n="about.stat2">Plataformas (Discord + Telegram)</div></div>
-      <div class="stat-card"><div class="num">10+</div><div class="label" data-i18n="about.stat3">Sistemas internos construídos</div></div>
-      <div class="stat-card"><div class="num">1</div><div class="label" data-i18n="about.stat4">Recurso de acessibilidade — rolagem falada</div></div>
+      <div class="stat-card"><div class="num">3</div><div class="label" data-i18n="about.stat2">Plataformas: Discord, Telegram e Web</div></div>
+      <div class="stat-card"><div class="num">10+</div><div class="label" data-i18n="about.stat3">Sistemas internos idealizados</div></div>
+      <div class="stat-card"><div class="num">1</div><div class="label" data-i18n="about.stat4">Recurso de acessibilidade: rolagem falada</div></div>
     </div>
   </div>
 </section>
@@ -368,7 +404,7 @@
   <div class="section-head">
     <div class="eyebrow" data-i18n="projects.eyebrow">Projetos</div>
     <h2 data-i18n="projects.title">O que eu construí.</h2>
-    <p data-i18n="projects.lead">Da rolagem de dados acessível ao quiz multiplayer no navegador — cada projeto resolve um problema real de uma comunidade.</p>
+    <p data-i18n="projects.lead">Da rolagem de dados acessível ao quiz no navegador, cada projeto resolve um problema real de uma comunidade.</p>
   </div>
 
   <div class="projects">
@@ -381,7 +417,7 @@
       </div>
       <div class="project-body">
         <div class="project-top">
-          <h3>GDI — Gerador de Improbabilidade</h3>
+          <h3>GDI, Gerador de Improbabilidade</h3>
           <span class="project-tag">Discord · Telegram</span>
         </div>
         <p class="desc" data-i18n="gdi.desc">Meu bot principal. Um app completo de RPG para Discord e Telegram, focado em ajudar mestres e jogadores a rodar suas mesas sem fricção.</p>
@@ -409,7 +445,26 @@
         <p class="desc" data-i18n="nin.desc">Bot sob medida para comunidades de NinOnline, com um sistema completo de economia, organizações ninja e segurança interna.</p>
         <ul class="feature-list" data-i18n-list="nin.features"></ul>
         <div class="project-links">
-          <a class="pill-link" href="https://linktr.ee/maiqbr" target="_blank" rel="noopener" data-i18n="links.communities">Ver comunidades</a>
+          <a class="pill-link" href="https://discord.gg/ASBNn9VGsP" target="_blank" rel="noopener" data-i18n="links.community">Comunidade</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- NinHawkCCG20 -->
+    <div class="project-card">
+      <div class="project-media">
+        <div class="project-status"><span class="pulse"></span><span data-i18n="status.live">Em produção</span></div>
+        <img src="assets/ninhawk-icon.png" alt="Logo Nin Online CCG BR 2.0">
+      </div>
+      <div class="project-body">
+        <div class="project-top">
+          <h3>Nin Online CCG BR 2.0</h3>
+          <span class="project-tag" data-i18n="ninhawk.tag">Web · Card Game</span>
+        </div>
+        <p class="desc" data-i18n="ninhawk.desc">Jogo de cartas colecionáveis para a comunidade de Nin Online. Ajudei na construção desse projeto junto com o time de desenvolvimento.</p>
+        <ul class="feature-list" data-i18n-list="ninhawk.features"></ul>
+        <div class="project-links">
+          <a class="pill-link primary" href="https://aurioshlookin.github.io/NinHawkCCG20/" target="_blank" rel="noopener" data-i18n="links.visit">Visitar</a>
         </div>
       </div>
     </div>
@@ -423,7 +478,7 @@
       <div class="project-body">
         <div class="project-top">
           <h3>QuizArena</h3>
-          <span class="project-tag">Web · Multiplayer</span>
+          <span class="project-tag">Web</span>
         </div>
         <p class="desc" data-i18n="quiz.desc">Jogo de quiz multiplayer direto no navegador, com várias categorias e modos de jogo.</p>
         <ul class="feature-list" data-i18n-list="quiz.features"></ul>
@@ -437,46 +492,64 @@
     <div class="project-card">
       <div class="project-media">
         <div class="project-status"><span class="pulse"></span><span data-i18n="status.live">Em produção</span></div>
-        <img src="assets/dice.png" alt="" style="width:90px; opacity:0.9;">
+        <svg width="110" height="110" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect x="8" y="8" width="48" height="48" rx="4" fill="#3a8f3a"/>
+          <rect x="8" y="8" width="48" height="14" rx="4" fill="#5cb85c"/>
+          <rect x="14" y="26" width="8" height="8" fill="#2e6e2e"/>
+          <rect x="28" y="34" width="8" height="8" fill="#2e6e2e"/>
+          <rect x="42" y="24" width="8" height="8" fill="#2e6e2e"/>
+          <rect x="20" y="42" width="8" height="8" fill="#2e6e2e"/>
+        </svg>
       </div>
       <div class="project-body">
         <div class="project-top">
-          <h3 data-i18n="minehut.title">Recrutamento de Moderação — Minehut</h3>
+          <h3 data-i18n="minehut.title">Recrutamento de Moderação, Minehut</h3>
           <span class="project-tag">Discord · Minecraft</span>
         </div>
         <p class="desc" data-i18n="minehut.desc">App de Discord para um servidor Minehut, com formulário de recrutamento de moderação para organizar e triar candidaturas.</p>
         <ul class="feature-list" data-i18n-list="minehut.features"></ul>
+        <div class="project-links">
+          <a class="pill-link" href="https://discord.gg/minehut" target="_blank" rel="noopener" data-i18n="links.community">Comunidade</a>
+        </div>
       </div>
     </div>
 
-  </div>
-</section>
-
-<section class="block">
-  <div class="section-head">
-    <div class="eyebrow" data-i18n="showcase.eyebrow">Em ação</div>
-    <h2 data-i18n="showcase.title">O GDI por dentro.</h2>
-  </div>
-  <div class="showcase">
-    <div class="showcase-grid">
-      <img src="assets/gdi-banner.png" alt="Banner do GDI - Gerador de Improbabilidade">
-      <img src="assets/gdi-funcoes.png" alt="Funcionalidades do GDI em uso no Discord">
-    </div>
   </div>
 </section>
 
 <section class="block alt" id="comunidades">
   <div class="section-head">
     <div class="eyebrow" data-i18n="comm.eyebrow">Comunidades</div>
-    <h2 data-i18n="comm.title">Onde tudo isso roda.</h2>
+    <h2 data-i18n="comm.title">Onde estou presente.</h2>
   </div>
   <div class="comm-wrap">
-    <div class="comm-card">
-      <div>
-        <h3 data-i18n="comm.cardTitle">Comunidades que administro</h3>
-        <p data-i18n="comm.cardDesc">Veja os servidores de Discord onde sou admin e onde meus bots e sistemas estão em uso real.</p>
+    <div class="comm-split">
+      <div class="comm-side">
+        <h3 class="comm-side-title" data-i18n="comm.communityLabel">Comunidade</h3>
+        <a class="comm-item" href="https://discord.gg/amongusbrasil" target="_blank" rel="noopener">
+          <span class="comm-fallback">AU</span>
+          <div>
+            <h4>Among Us Brasil</h4>
+            <span data-i18n="comm.among">Maior comunidade BR de Among Us</span>
+          </div>
+        </a>
       </div>
-      <a class="pill-link primary" href="https://linktr.ee/maiqbr" target="_blank" rel="noopener" data-i18n="comm.cardLink">Ver no Linktree</a>
+      <div class="comm-side">
+        <h3 class="comm-side-title" data-i18n="comm.proLabel">Atuação profissional</h3>
+        <div class="pro-card">
+          <img src="assets/gamersafer-icon.png" alt="GamerSafer">
+          <div class="pro-info">
+            <h4>GamerSafer</h4>
+            <span class="pro-role" data-i18n="comm.role">Business Ops Manager</span>
+            <div class="pro-links">
+              <a href="https://www.gamersafer.com/" target="_blank" rel="noopener" data-i18n="comm.linkSite">Site</a>
+              <a href="https://discord.gg/gamersafer" target="_blank" rel="noopener" data-i18n="comm.linkDiscord">Discord</a>
+              <a href="https://www.minehut.com/" target="_blank" rel="noopener">Minehut</a>
+              <a href="https://discord.gg/vivogaming" target="_blank" rel="noopener" data-i18n="comm.linkVivo">Discord Vivo Gaming</a>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </section>
@@ -486,7 +559,7 @@
   <p data-i18n="footer.text">Construído com café, dados e algumas linhas a mais de JavaScript do que o necessário.</p>
   <p style="margin-top:10px;">
     <a href="https://gdibot.carrd.co" target="_blank" rel="noopener">GDI</a> ·
-    <a href="https://linktr.ee/maiqbr" target="_blank" rel="noopener">Linktree</a> ·
+    <a href="https://aurioshlookin.github.io/NinHawkCCG20/" target="_blank" rel="noopener">Nin Online CCG</a> ·
     <a href="https://maiqbr.github.io/quiz/" target="_blank" rel="noopener">QuizArena</a>
   </p>
 </footer>
@@ -495,66 +568,76 @@
 const i18n = {
   pt: {
     "nav.about":"Sobre","nav.projects":"Projetos","nav.communities":"Comunidades","nav.contact":"Contato",
-    "hero.eyebrow":"Desenvolvedor de bots & ferramentas para comunidades",
-    "hero.title":'Eu construo as ferramentas que fazem <span class="accent">comunidades funcionarem.</span>',
-    "hero.lead":"Bots de Discord, jogos no navegador e sistemas internos para RPG, NinOnline e Minecraft — projetados, codados e mantidos do início ao fim.",
-    "hero.ctaPrimary":"Ver projetos","hero.ctaGhost":"Comunidades que administro",
-    "about.eyebrow":"Sobre","about.title":"De ideia a bot em produção.",
-    "about.p1":"Trabalho na intersecção entre jogos e ferramentas: construo bots de Discord, jogos web e sistemas internos que ajudam comunidades de RPG, NinOnline e Minecraft a funcionar melhor — desde rolagem de dados até economia interna, moderação e eventos.",
-    "about.p2":"Hoje meu projeto principal é o GDI, um app de Discord e Telegram para RPG usado por diversas comunidades. Também desenvolvo e administro sistemas sob medida, como o NinScroll para comunidades de NinOnline, além de jogos e apps menores.",
-    "about.stat1":"Bots & apps em produção","about.stat2":"Plataformas (Discord + Telegram)",
-    "about.stat3":"Sistemas internos construídos","about.stat4":"Recurso de acessibilidade — rolagem falada",
+    "hero.eyebrow":"Hobby: bots e ferramentas para comunidades",
+    "hero.title":'Eu crio as ferramentas que ajudam <span class="accent">comunidades a funcionar.</span>',
+    "hero.lead":"Nas horas livres, idealizo e dou vida a bots de Discord, jogos no navegador e sistemas internos para RPG, NinOnline e Minecraft, do conceito até o uso real em produção.",
+    "hero.ctaPrimary":"Ver projetos","hero.ctaGhost":"Comunidades",
+    "about.eyebrow":"Sobre","about.title":"Um hobby que virou várias ferramentas.",
+    "about.p1":"É um hobby: gosto de pensar em sistemas que resolvem problemas reais de comunidades, da rolagem de dados acessível à economia interna e moderação, e de dar vida a essas ideias.",
+    "about.p2":"Hoje meu projeto principal é o GDI, um app para RPG usado em várias comunidades. Também idealizei o NinScroll para comunidades de NinOnline, ajudei na construção do Nin Online CCG BR 2.0, além de jogos e apps menores.",
+    "about.stat1":"Bots & apps em produção","about.stat2":"Plataformas: Discord, Telegram e Web",
+    "about.stat3":"Sistemas internos idealizados","about.stat4":"Recurso de acessibilidade: rolagem falada",
     "projects.eyebrow":"Projetos","projects.title":"O que eu construí.",
-    "projects.lead":"Da rolagem de dados acessível ao quiz multiplayer no navegador — cada projeto resolve um problema real de uma comunidade.",
+    "projects.lead":"Da rolagem de dados acessível ao quiz no navegador, cada projeto resolve um problema real de uma comunidade.",
     "status.live":"Em produção",
-    "gdi.desc":"Meu bot principal. Um app completo de RPG para Discord e Telegram, focado em ajudar mestres e jogadores a rodar suas mesas sem fricção.",
+    "gdi.desc":"Meu projeto principal. Um app completo de RPG para Discord e Telegram, focado em ajudar mestres e jogadores a rodar suas mesas sem fricção.",
     "gdi.features":["Sistema de tickets e formulários","Rolagem de dados variados","Rolagem falada para jogadores cegos","Criação de eventos","Ficha de jogador completa","Sistema de iniciativa","Criação de calls para campanhas","Sistema de ambientação por mensagem"],
-    "nin.desc":"Bot sob medida para comunidades de NinOnline, com um sistema completo de economia, organizações ninja e segurança interna.",
+    "nin.desc":"Sistema sob medida para comunidades de NinOnline, com economia completa, organizações ninja e segurança interna.",
     "nin.features":["Tickets e formulários","Sistema de eventos","Economia interna","Minigames","Controle de organizações ninja","Nível por interação","Sistema anti-alt/spy","Apostas entre ninjas","Banco da vila","Sistema de lembretes"],
-    "quiz.desc":"Jogo de quiz multiplayer direto no navegador, com várias categorias e modos de jogo.",
-    "quiz.features":["Multiplayer em tempo real","Múltiplas categorias de quiz","Placar e ranking ao vivo","Modos de jogo temáticos"],
-    "minehut.title":"Recrutamento de Moderação — Minehut",
+    "links.community":"Comunidade","links.visit":"Visitar",
+    "ninhawk.tag":"Web · Card Game",
+    "ninhawk.desc":"Jogo de cartas colecionáveis para a comunidade de Nin Online. Ajudei na construção desse projeto junto com o time de desenvolvimento.",
+    "ninhawk.features":["Coleção de cartas","Sistema de raridade","Fusão de cartas","Ranking da comunidade","Trocas entre jogadores","Login com Discord"],
+    "quiz.desc":"Jogo de quiz direto no navegador, com várias categorias e modos de jogo.",
+    "quiz.features":["Múltiplas categorias de quiz","Placar e ranking ao vivo","Modos de jogo temáticos","Filtros por dificuldade"],
+    "minehut.title":"Recrutamento de Moderação, Minehut",
     "minehut.desc":"App de Discord para um servidor Minehut, com formulário de recrutamento de moderação para organizar e triar candidaturas.",
     "minehut.features":["Formulário de recrutamento","Triagem de candidaturas","Integração com Discord"],
     "links.site":"Site do GDI","links.addDiscord":"Adicionar no Discord","links.addTelegram":"Adicionar no Telegram",
-    "links.support":"Comunidade de suporte","links.communities":"Ver comunidades","links.play":"Jogar agora",
-    "showcase.eyebrow":"Em ação","showcase.title":"O GDI por dentro.",
-    "comm.eyebrow":"Comunidades","comm.title":"Onde tudo isso roda.",
-    "comm.cardTitle":"Comunidades que administro",
-    "comm.cardDesc":"Veja os servidores de Discord onde sou admin e onde meus bots e sistemas estão em uso real.",
-    "comm.cardLink":"Ver no Linktree",
+    "links.support":"Comunidade de suporte","links.play":"Jogar agora",
+    "comm.eyebrow":"Comunidades","comm.title":"Onde estou presente.",
+    "comm.communityLabel":"Comunidade",
+    "comm.among":"Maior comunidade BR de Among Us",
+    "comm.proLabel":"Atuação profissional",
+    "comm.role":"Business Ops Manager",
+    "comm.linkSite":"Site","comm.linkDiscord":"Discord","comm.linkVivo":"Discord Vivo Gaming",
     "footer.text":"Construído com café, dados e algumas linhas a mais de JavaScript do que o necessário."
   },
   en: {
     "nav.about":"About","nav.projects":"Projects","nav.communities":"Communities","nav.contact":"Contact",
-    "hero.eyebrow":"Bot developer & community tooling",
-    "hero.title":'I build the tools that make <span class="accent">communities run.</span>',
-    "hero.lead":"Discord bots, browser games and internal systems for RPG, NinOnline and Minecraft communities — designed, coded and maintained end to end.",
-    "hero.ctaPrimary":"See projects","hero.ctaGhost":"Communities I run",
-    "about.eyebrow":"About","about.title":"From idea to bot in production.",
-    "about.p1":"I work at the intersection of games and tooling: building Discord bots, web games, and internal systems that help RPG, NinOnline and Minecraft communities run smoother — from dice rolling to internal economies, moderation and events.",
-    "about.p2":"My main project today is GDI, a Discord and Telegram app for tabletop RPG used by several communities. I also build and run custom systems like NinScroll for NinOnline communities, plus smaller games and apps.",
-    "about.stat1":"Bots & apps in production","about.stat2":"Platforms (Discord + Telegram)",
-    "about.stat3":"Internal systems built","about.stat4":"Accessibility feature — spoken dice rolls",
+    "hero.eyebrow":"Hobby: bots and tools for communities",
+    "hero.title":'I create the tools that help <span class="accent">communities run.</span>',
+    "hero.lead":"In my free time, I come up with and build Discord bots, browser games and internal systems for RPG, NinOnline and Minecraft communities, from concept to everyday use in production.",
+    "hero.ctaPrimary":"See projects","hero.ctaGhost":"Communities",
+    "about.eyebrow":"About","about.title":"A hobby that turned into several tools.",
+    "about.p1":"It's a hobby: I like thinking through systems that solve real community problems, from accessible dice rolling to internal economies and moderation, and bringing those ideas to life.",
+    "about.p2":"My main project today is GDI, an RPG app used across several communities. I also came up with NinScroll for NinOnline communities, helped build Nin Online CCG BR 2.0, plus smaller games and apps.",
+    "about.stat1":"Bots & apps in production","about.stat2":"Platforms: Discord, Telegram and Web",
+    "about.stat3":"Internal systems designed","about.stat4":"Accessibility feature: spoken dice rolls",
     "projects.eyebrow":"Projects","projects.title":"What I've built.",
-    "projects.lead":"From accessible dice rolling to a multiplayer browser quiz — each project solves a real problem for a community.",
+    "projects.lead":"From accessible dice rolling to a browser quiz, each project solves a real problem for a community.",
     "status.live":"In production",
-    "gdi.desc":"My flagship bot. A full RPG app for Discord and Telegram, built to help game masters and players run their tables without friction.",
+    "gdi.desc":"My main project. A full RPG app for Discord and Telegram, built to help game masters and players run their tables without friction.",
     "gdi.features":["Ticket & form system","Multiple dice rolling formats","Spoken dice rolls for blind players","Event creation","Full character sheets","Initiative tracking system","Campaign call creation","Message-based ambiance system"],
-    "nin.desc":"Custom-built bot for NinOnline communities, with a full economy, ninja organization controls and internal security systems.",
+    "nin.desc":"Custom-built system for NinOnline communities, with a full economy, ninja organization controls and internal security systems.",
     "nin.features":["Tickets & forms","Event system","Internal economy","Minigames","Ninja organization control","Interaction-based leveling","Anti-alt/spy system","Betting between ninjas","Village bank system","Reminder system"],
-    "quiz.desc":"A multiplayer quiz game that runs right in the browser, with several categories and game modes.",
-    "quiz.features":["Real-time multiplayer","Multiple quiz categories","Live scoreboard & ranking","Themed game modes"],
-    "minehut.title":"Moderation Recruitment — Minehut",
+    "links.community":"Community","links.visit":"Visit",
+    "ninhawk.tag":"Web · Card Game",
+    "ninhawk.desc":"A collectible card game for the Nin Online community. I helped build this project together with the development team.",
+    "ninhawk.features":["Card collection","Rarity system","Card fusion","Community ranking","Trading between players","Discord login"],
+    "quiz.desc":"A quiz game that runs right in the browser, with several categories and game modes.",
+    "quiz.features":["Multiple quiz categories","Live scoreboard & ranking","Themed game modes","Difficulty filters"],
+    "minehut.title":"Moderation Recruitment, Minehut",
     "minehut.desc":"Discord app for a Minehut server, with a moderation recruitment form to organize and screen applications.",
     "minehut.features":["Recruitment form","Application screening","Discord integration"],
     "links.site":"GDI site","links.addDiscord":"Add to Discord","links.addTelegram":"Add to Telegram",
-    "links.support":"Support community","links.communities":"See communities","links.play":"Play now",
-    "showcase.eyebrow":"In action","showcase.title":"Inside GDI.",
-    "comm.eyebrow":"Communities","comm.title":"Where it all runs.",
-    "comm.cardTitle":"Communities I run",
-    "comm.cardDesc":"Check out the Discord servers where I'm an admin and where my bots and systems are actually in use.",
-    "comm.cardLink":"View on Linktree",
+    "links.support":"Support community","links.play":"Play now",
+    "comm.eyebrow":"Communities","comm.title":"Where I'm present.",
+    "comm.communityLabel":"Community",
+    "comm.among":"Largest Among Us community in Brazil",
+    "comm.proLabel":"Professional work",
+    "comm.role":"Business Ops Manager",
+    "comm.linkSite":"Site","comm.linkDiscord":"Discord","comm.linkVivo":"Vivo Gaming Discord",
     "footer.text":"Built with coffee, dice, and a few more lines of JavaScript than strictly necessary."
   }
 };
@@ -593,3 +676,4 @@ document.querySelectorAll('.nav-links a').forEach(a=>{
 
 </body>
 </html>
+
