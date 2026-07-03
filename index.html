@@ -299,6 +299,7 @@
   .project-card:nth-child(2) .project-media img{animation-delay:1.2s; animation-duration:7s;}
   .project-card:nth-child(3) .project-media img{animation-delay:2.4s; animation-duration:5.5s;}
   .project-card:nth-child(4) .project-media img{animation-delay:0.6s; animation-duration:8s;}
+  .project-card:nth-child(5) .project-media img{animation-delay:1.8s; animation-duration:6.5s;}
   .project-status{
     position:absolute; top:14px; left:14px;
     font-family:var(--display-sc); font-size:0.66rem; letter-spacing:0.08em;
@@ -499,9 +500,9 @@
       </div>
     </div>
     <div class="stat-grid">
-      <div class="stat-card"><span class="stat-icon" style="animation-delay:0s">🤖</span><div class="num">4+</div><div class="label" data-i18n="about.stat1">Bots & apps em produção</div></div>
+      <div class="stat-card"><span class="stat-icon" style="animation-delay:0s">🤖</span><div class="num">5+</div><div class="label" data-i18n="about.stat1">Bots & apps em produção</div></div>
       <div class="stat-card"><span class="stat-icon" style="animation-delay:1.1s">💬</span><div class="num">3</div><div class="label" data-i18n="about.stat2">Plataformas: Discord, Telegram e Web</div></div>
-      <div class="stat-card"><span class="stat-icon" style="animation-delay:2s">⚙️</span><div class="num">10+</div><div class="label" data-i18n="about.stat3">Sistemas internos idealizados</div></div>
+      <div class="stat-card"><span class="stat-icon" style="animation-delay:2s">⚙️</span><div class="num">30+</div><div class="label" data-i18n="about.stat3">Sistemas internos idealizados</div></div>
       <div class="stat-card"><span class="stat-icon" style="animation-delay:0.6s">🎲</span><div class="num">1</div><div class="label" data-i18n="about.stat4">Recurso de acessibilidade: rolagem falada</div></div>
     </div>
   </div>
@@ -593,6 +594,24 @@
       </div>
     </div>
 
+    <div class="project-card">
+      <div class="project-media">
+        <div class="project-status"><span class="pulse"></span><span data-i18n="status.live">Online</span></div>
+        <img src="assets/nfu1.png" alt="Bot Lucas">
+      </div>
+      <div class="project-body">
+        <div class="project-top">
+          <h3>Bot Lucas</h3>
+          <span class="project-tag">Discord · Among Us Brasil</span>
+        </div>
+        <p class="desc" data-i18n="lucas.desc">Bot dedicado à comunidade Among Us Brasil, com sistemas de gerenciamento de calls e tickets pensados pra escala e organização de uma das maiores comunidades BR.</p>
+        <ul class="feature-list" data-i18n-list="lucas.features"></ul>
+        <div class="project-links">
+          <a class="pill-link" href="https://discord.gg/amongusbrasil" target="_blank" rel="noopener" data-i18n="links.communityAmong">Comunidade - Among Us Brasil</a>
+        </div>
+      </div>
+    </div>
+
   </div>
 </section>
 
@@ -669,7 +688,9 @@ const i18n = {
     "ninhawk.features":["Coleção de cartas","Sistema de raridade","Fusão de cartas","Ranking da comunidade","Trocas entre jogadores","Login com Discord"],
     "quiz.desc":"Jogo de quiz multiplayer direto no navegador, com várias categorias e modos de jogo.",
     "quiz.features":["Múltiplas categorias de quiz","Placar e ranking ao vivo","Modos de jogo temáticos","Filtros por dificuldade"],
-    "links.site":"Site do GDI","links.addDiscord":"Adicionar no Discord","links.addTelegram":"Adicionar no Telegram",
+    "links.communityAmong":"Comunidade - Among Us Brasil",
+    "lucas.desc":"Bot dedicado à comunidade Among Us Brasil, com sistemas de gerenciamento de calls e tickets pensados pra escala e organização de uma das maiores comunidades BR.",
+    "lucas.features":["Sistema de call automática","Sistema de call temporária","Sistema de call fixa","Sistema completo de tickets"],
     "links.support":"Comunidade de suporte","links.play":"Jogar agora",
     "comm.eyebrow":"Comunidades","comm.title":"Onde estou presente.",
     "comm.communityLabel":"Comunidade","comm.among":"Maior comunidade BR de Among Us",
@@ -701,7 +722,9 @@ const i18n = {
     "ninhawk.features":["Card collection","Rarity system","Card fusion","Community ranking","Trading between players","Discord login"],
     "quiz.desc":"A quiz game that runs right in the browser, with several categories and game modes.",
     "quiz.features":["Multiple quiz categories","Live scoreboard & ranking","Themed game modes","Difficulty filters"],
-    "links.site":"GDI site","links.addDiscord":"Add to Discord","links.addTelegram":"Add to Telegram",
+    "links.communityAmong":"Community - Among Us Brasil",
+    "lucas.desc":"A bot dedicated to the Among Us Brasil community, with call management and ticket systems built for the scale and organization of one of the largest Brazilian communities.",
+    "lucas.features":["Automatic call system","Temporary call system","Fixed call system","Full ticket system"],
     "links.support":"Support community","links.play":"Play now",
     "comm.eyebrow":"Communities","comm.title":"Where I'm present.",
     "comm.communityLabel":"Community","comm.among":"Largest Among Us community in Brazil",
