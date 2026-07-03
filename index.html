@@ -241,6 +241,7 @@
     border:1px solid var(--line-soft); border-radius:var(--radius); padding:24px;
     position:relative; overflow:hidden;
     transition:border-color .3s, box-shadow .3s, transform .25s;
+    display:flex; flex-direction:column;
   }
   .stat-card:hover{
     border-color:var(--purple);
@@ -289,11 +290,11 @@
   .project-media img{
     max-width:130px; max-height:130px; object-fit:contain;
     animation:float 6s ease-in-out infinite;
-    filter:drop-shadow(0 12px 24px rgba(0,0,0,0.6)) drop-shadow(0 0 18px rgba(139,92,246,0.2));
+    filter:drop-shadow(0 12px 24px rgba(0,0,0,0.6)) drop-shadow(0 0 18px rgba(139,92,246,0.45));
     transition:filter .3s;
   }
   .project-card:hover .project-media img{
-    filter:drop-shadow(0 16px 28px rgba(0,0,0,0.7)) drop-shadow(0 0 28px rgba(139,92,246,0.4));
+    filter:drop-shadow(0 16px 28px rgba(0,0,0,0.7)) drop-shadow(0 0 32px rgba(139,92,246,0.7));
   }
   .project-card:nth-child(2) .project-media img{animation-delay:1.2s; animation-duration:7s;}
   .project-card:nth-child(3) .project-media img{animation-delay:2.4s; animation-duration:5.5s;}
@@ -416,8 +417,9 @@
     .section-head h2{font-size:1.5rem;}
     .about-wrap{grid-template-columns:1fr; padding:0 20px; gap:32px;}
     .stat-grid{grid-template-columns:1fr 1fr; gap:12px;}
-    .stat-card{padding:18px;}
-    .stat-card .num{font-size:1.7rem;}
+    .stat-card{padding:16px; aspect-ratio:1/1; justify-content:center;}
+    .stat-card .num{font-size:1.6rem;}
+    .stat-icon{font-size:1.5rem; margin-bottom:6px;}
     .projects{padding:0 20px; gap:18px;}
     .project-body{padding:22px 18px;}
     .project-media{padding:24px;}
@@ -655,7 +657,7 @@ const i18n = {
     "about.stat1":"Bots & apps em produção","about.stat2":"Plataformas: Discord, Telegram e Web",
     "about.stat3":"Sistemas internos idealizados","about.stat4":"Recurso de acessibilidade: rolagem falada",
     "projects.eyebrow":"Projetos","projects.title":"O que eu construí.",
-    "projects.lead":"Da rolagem de dados acessível ao quiz no navegador, cada projeto resolve um problema real de uma comunidade.",
+    "projects.lead":"Da rolagem de dados ao quiz no navegador, cada projeto resolve um problema real de uma comunidade ou diverte!",
     "status.live":"Online",
     "gdi.desc":"Meu projeto principal. Um app completo de RPG para Discord e Telegram, focado em ajudar mestres e jogadores a rodar suas mesas sem fricção.",
     "gdi.features":["Sistema de tickets e formulários","Rolagem de dados variados","Rolagem falada para jogadores cegos","Criação de eventos","Ficha de jogador completa","Sistema de iniciativa","Criação de calls para campanhas","Sistema de ambientação por mensagem"],
@@ -687,7 +689,7 @@ const i18n = {
     "about.stat1":"Bots & apps in production","about.stat2":"Platforms: Discord, Telegram and Web",
     "about.stat3":"Internal systems designed","about.stat4":"Accessibility feature: spoken dice rolls",
     "projects.eyebrow":"Projects","projects.title":"What I've built.",
-    "projects.lead":"From accessible dice rolling to a browser quiz, each project solves a real problem for a community.",
+    "projects.lead":"From dice rolling to a browser quiz, each project either solves a real community problem or just makes it more fun!",
     "status.live":"Online",
     "gdi.desc":"My main project. A full RPG app for Discord and Telegram, built to help game masters and players run their tables without friction.",
     "gdi.features":["Ticket & form system","Multiple dice rolling formats","Spoken dice rolls for blind players","Event creation","Full character sheets","Initiative tracking system","Campaign call creation","Message-based ambiance system"],
