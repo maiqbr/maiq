@@ -300,6 +300,7 @@
   .project-card:nth-child(3) .project-media img{animation-delay:2.4s; animation-duration:5.5s;}
   .project-card:nth-child(4) .project-media img{animation-delay:0.6s; animation-duration:8s;}
   .project-card:nth-child(5) .project-media img{animation-delay:1.8s; animation-duration:6.5s;}
+  .project-card:nth-child(6) .project-media img{animation-delay:3s; animation-duration:7.5s;}
   .project-status{
     position:absolute; top:14px; left:14px;
     font-family:var(--display-sc); font-size:0.66rem; letter-spacing:0.08em;
@@ -611,6 +612,24 @@
       </div>
     </div>
 
+    <div class="project-card">
+      <div class="project-media">
+        <div class="project-status"><span class="pulse"></span><span data-i18n="status.live">Online</span></div>
+        <img src="assets/tcgamong.png" alt="Among Us Brasil TCG">
+      </div>
+      <div class="project-body">
+        <div class="project-top">
+          <h3>Among Us Brasil TCG</h3>
+          <span class="project-tag" data-i18n="aubtcg.tag">Web · Card Game</span>
+        </div>
+        <p class="desc" data-i18n="aubtcg.desc">Jogo de cartas colecionáveis para a comunidade Among Us Brasil. Ajudei na construção desse projeto junto com o time de desenvolvimento.</p>
+        <ul class="feature-list" data-i18n-list="aubtcg.features"></ul>
+        <div class="project-links">
+          <a class="pill-link primary" href="https://aubtcg.maiq.dev.br/" target="_blank" rel="noopener" data-i18n="links.visit">Visitar</a>
+        </div>
+      </div>
+    </div>
+
   </div>
 </section>
 
@@ -690,6 +709,9 @@ const i18n = {
     "links.communityAmong":"Comunidade - Among Us Brasil",
     "lucas.desc":"Bot dedicado à comunidade Among Us Brasil, com sistemas de gerenciamento de calls e tickets pensados pra escala e organização de uma das maiores comunidades BR.",
     "lucas.features":["Sistema de call automática","Sistema de call temporária","Sistema de call fixa","Sistema completo de tickets"],
+    "aubtcg.tag":"Web · Card Game",
+    "aubtcg.desc":"Jogo de cartas colecionáveis para a comunidade Among Us Brasil. Ajudei na construção desse projeto junto com o time de desenvolvimento.",
+    "aubtcg.features":["Coleção de cartas","Sistema de raridade","Fusão de cartas","Ranking da comunidade","Trocas entre jogadores","Login com Discord"],
     "links.support":"Comunidade de suporte","links.play":"Jogar agora",
     "comm.eyebrow":"Comunidades","comm.title":"Onde estou presente.",
     "comm.communityLabel":"Comunidade","comm.among":"Maior comunidade BR de Among Us",
@@ -724,6 +746,9 @@ const i18n = {
     "links.communityAmong":"Community - Among Us Brasil",
     "lucas.desc":"A bot dedicated to the Among Us Brasil community, with call management and ticket systems built for the scale and organization of one of the largest Brazilian communities.",
     "lucas.features":["Automatic call system","Temporary call system","Fixed call system","Full ticket system"],
+    "aubtcg.tag":"Web · Card Game",
+    "aubtcg.desc":"A collectible card game for the Among Us Brasil community. I helped build this project together with the development team.",
+    "aubtcg.features":["Card collection","Rarity system","Card fusion","Community ranking","Trading between players","Discord login"],
     "links.support":"Support community","links.play":"Play now",
     "comm.eyebrow":"Communities","comm.title":"Where I'm present.",
     "comm.communityLabel":"Community","comm.among":"Largest Among Us community in Brazil",
