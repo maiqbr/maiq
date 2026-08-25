@@ -318,6 +318,8 @@ section.block.alt{background:var(--bg-soft); border-top:1px solid var(--line-sof
 }
 .feature-list li::before{content:"›"; color:var(--gold); font-weight:700; flex-shrink:0;}
 .project-links{display:flex; gap:10px; flex-wrap:wrap;}
+.telegram-link{display:flex; flex-direction:column; align-items:flex-start; gap:5px;}
+.telegram-link small{max-width:190px; color:var(--muted); font-size:0.72rem; line-height:1.35;}
 .pill-link{
   font-family:var(--display-sc); font-size:0.78rem; font-weight:600;
   padding:9px 18px; border-radius:8px;
