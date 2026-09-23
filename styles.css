@@ -413,7 +413,7 @@ footer a:hover{text-decoration:underline;}
   .hero p.lead{font-size:1rem; max-width:100%;}
   .hero-cta{width:100%;}
   .hero-cta .btn{flex:1 1 auto; justify-content:center; text-align:center;}
-  .btn-github{margin-left:0;}
+  .btn-github{margin-left:0 !important;}
   section.block{padding:52px 0;}
   .section-head{margin-bottom:28px; padding:0 20px;}
   .section-head h2{font-size:1.5rem;}
