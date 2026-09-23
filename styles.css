@@ -163,6 +163,12 @@ h1 .accent{
 .btn-primary:hover{transform:translateY(-2px); box-shadow:0 12px 28px -8px rgba(139,92,246,0.7);}
 .btn-ghost{background:transparent; border-color:var(--line); color:var(--text);}
 .btn-ghost:hover{border-color:var(--purple); color:var(--ember-soft); transform:translateY(-2px);}
+.btn-github{
+  margin-left:12px; background:linear-gradient(135deg, var(--gold-soft), var(--gold));
+  border-color:var(--gold-soft); color:var(--ink); box-shadow:0 8px 24px -8px rgba(214,162,63,0.5);
+}
+.btn-github:hover{transform:translateY(-2px); box-shadow:0 12px 28px -8px rgba(214,162,63,0.7);}
+.btn-icon{width:18px; height:18px; flex:0 0 18px;}
 
 .hero-portrait{position:relative; justify-self:center; width:100%; max-width:340px;}
 .portrait-frame{
@@ -407,6 +413,7 @@ footer a:hover{text-decoration:underline;}
   .hero p.lead{font-size:1rem; max-width:100%;}
   .hero-cta{width:100%;}
   .hero-cta .btn{flex:1 1 auto; justify-content:center; text-align:center;}
+  .btn-github{margin-left:0;}
   section.block{padding:52px 0;}
   .section-head{margin-bottom:28px; padding:0 20px;}
   .section-head h2{font-size:1.5rem;}
