@@ -196,6 +196,24 @@
 
     <div class="project-card">
       <div class="project-media">
+        <div class="project-status"><span class="pulse"></span><span data-i18n="status.personalUse">Uso pessoal</span></div>
+        <img src="assets/grimorio-icon.svg" alt="Logo Grimório">
+      </div>
+      <div class="project-body">
+        <div class="project-top">
+          <h3>Grimório</h3>
+          <span class="project-tag">Web · React · Cloudflare</span>
+        </div>
+        <p class="desc" data-i18n="grimorio.desc">ERP pessoal que reúne tarefas, calendário, projetos, notas, senhas e e-mail em um único espaço.</p>
+        <ul class="feature-list" data-i18n-list="grimorio.features"></ul>
+        <div class="project-links">
+          <a class="pill-link primary" href="https://github.com/maiqbr/grimorio-erp" target="_blank" rel="noopener" data-i18n="links.repository">Ver no GitHub</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="project-card">
+      <div class="project-media">
         <div class="project-status"><span class="pulse"></span><span data-i18n="status.live">Online</span></div>
         <img src="assets/tcgamong.png" alt="Among Us Brasil TCG">
       </div>
@@ -315,7 +333,7 @@ const i18n = {
     "about.stat3":"Sistemas internos idealizados","about.stat4":"Recurso de acessibilidade: rolagem falada",
     "projects.eyebrow":"Projetos","projects.title":"O que eu construí.",
     "projects.lead":"Da rolagem de dados ao quiz no navegador, cada projeto resolve um problema real de uma comunidade ou diverte!",
-    "status.live":"Online","status.openSource":"Código aberto",
+    "status.live":"Online","status.openSource":"Código aberto","status.personalUse":"Uso pessoal",
     "gdi.desc":"Meu projeto principal. Um app completo de RPG para Discord e Telegram, focado em ajudar mestres e jogadores a rodar suas mesas sem fricção.",
     "gdi.features":["Sistema completo de tickets","Sistema completo de painéis editáveis","Sistema completo de formulários","Rolagem de dados variados","Rolagem falada para jogadores cegos","Criação de eventos","Ficha de jogador completa","Sistema de iniciativa","Criação de calls fixas para campanhas e calls temporárias para oneshots","Sistema de ambientação por mensagem"],
     "nin.desc":"Sistema sob medida para comunidades de NinOnline, com economia completa, organizações ninja e segurança interna.",
@@ -330,6 +348,8 @@ const i18n = {
     "rubylive.features":["Login e identificação da call pelo Discord","Compartilhamento de tela e webcam","Seleção individual das transmissões","Mídia P2P com WebRTC","Layouts de tela e câmera personalizáveis","Controles de qualidade, FPS e bitrate","Permissões configuráveis por call, categoria e cargo"],
     "spellbook.desc":"Aplicativo Windows para gravar e reproduzir automações de teclado e mouse, organizadas como feitiços acionados por atalhos globais.",
     "spellbook.features":["Gravação de teclado, cliques, movimentos e rolagem","Construtor manual de sequências","Autoclicker totalmente configurável","Repetição de automações","Atalhos globais para iniciar e parar","Funcionamento local, sem conta ou internet","Código aberto sob licença GPLv3"],
+    "grimorio.desc":"ERP pessoal que reúne tarefas, calendário, projetos, notas, senhas e e-mail em um único espaço.",
+    "grimorio.features":["Tarefas recorrentes e calendário","Organização de projetos e notas","Cofre de senhas criptografado","Rascunhos, envio e recebimento de e-mails","Temas, identidade visual e idioma personalizáveis","Exportação de dados e backups","Instalação pessoal com Cloudflare Workers, D1 e R2"],
     "links.repository":"Ver no GitHub",
     "aubtcg.tag":"Web · Card Game",
     "aubtcg.desc":"Jogo de cartas colecionáveis para a comunidade Among Us Brasil. Ajudei na construção desse projeto junto com o time de desenvolvimento.",
@@ -358,7 +378,7 @@ const i18n = {
     "about.stat3":"Internal systems designed","about.stat4":"Accessibility feature: spoken dice rolls",
     "projects.eyebrow":"Projects","projects.title":"What I've built.",
     "projects.lead":"From dice rolling to a browser quiz, each project either solves a real community problem or just makes it more fun!",
-    "status.live":"Online","status.openSource":"Open source",
+    "status.live":"Online","status.openSource":"Open source","status.personalUse":"Personal use",
     "gdi.desc":"My main project. A full RPG app for Discord and Telegram, built to help game masters and players run their tables without friction.",
     "gdi.features":["Full ticket system","Full editable panel system","Full form system","Multiple dice rolling formats","Spoken dice rolls for blind players","Event creation","Full character sheets","Initiative tracking system","Fixed calls for campaigns and temporary calls for one-shots","Message-based ambiance system"],
     "nin.desc":"Custom-built system for NinOnline communities, with a full economy, ninja organization controls and internal security systems.",
@@ -373,6 +393,8 @@ const i18n = {
     "rubylive.features":["Discord login and voice channel detection","Screen and webcam sharing","Individual stream selection","Peer-to-peer media with WebRTC","Customizable screen and camera layouts","Quality, FPS and bitrate controls","Permissions configurable by channel, category and role"],
     "spellbook.desc":"A Windows app for recording and replaying keyboard and mouse automations, organized as spells triggered by global shortcuts.",
     "spellbook.features":["Keyboard, click, movement and scroll recording","Manual sequence builder","Fully configurable autoclicker","Automation looping","Global shortcuts to start and stop","Runs locally without an account or internet","Open source under the GPLv3 license"],
+    "grimorio.desc":"A personal ERP that brings tasks, calendar, projects, notes, passwords and email together in one place.",
+    "grimorio.features":["Recurring tasks and calendar","Project and note organization","Encrypted password vault","Email drafts, sending and receiving","Customizable themes, branding and language","Data exports and backups","Personal deployment with Cloudflare Workers, D1 and R2"],
     "links.repository":"View on GitHub",
     "aubtcg.tag":"Web · Card Game",
     "aubtcg.desc":"A collectible card game for the Among Us Brasil community. I helped build this project together with the development team.",
